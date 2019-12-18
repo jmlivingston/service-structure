@@ -1,38 +1,34 @@
-export const HTTP_VERB = Object.freeze({
-  GET: 'GET',
-  POST: 'POST',
-  PUT: 'PUT',
-  DELETE: 'DELETE'
-})
+import HTTP_VERB from './HTTP_VERB'
 
-const API = Object.freeze({
+const NAME = 'TODO'
+const SUFFIX = 'to-dos'
+
+export default Object.freeze({
   TODO: {
+    ADD: {
+      key: `${NAME}_ADD`,
+      method: HTTP_VERB.POST,
+      resource: () => `${process.env.API_BASE_URL}/${SUFFIX}`
+    },
     GET: {
-      key: 'TODO.GET',
+      key: `${NAME}_GET`,
       method: HTTP_VERB.GET,
-      resource: () => `${process.env.API_BASE_URL}/to-dos`
+      resource: () => `${process.env.API_BASE_URL}/${SUFFIX}`
     },
     GET_BY_ID: {
-      key: 'TODO.GET_BY_ID',
+      key: `${NAME}_GET_BY_ID`,
       method: HTTP_VERB.GET,
-      resource: ({ id }) => `${process.env.API_BASE_URL}/to-dos/${id}`
+      resource: ({ id }) => `${process.env.API_BASE_URL}/${SUFFIX}/${id}`
     },
-    POST: {
-      key: 'TODO.POST',
-      method: HTTP_VERB.POST,
-      resource: ({ id }) => `${process.env.API_BASE_URL}/to-dos/${id}`
-    },
-    PUT: {
-      key: 'TODO.PUT',
-      method: HTTP_VERB.PUT,
-      resource: ({ id }) => `${process.env.API_BASE_URL}/to-dos/${id}`
-    },
-    DELETE: {
-      key: 'TODO.DELETE',
+    REMOVE: {
+      key: `${NAME}_REMOVE`,
       method: HTTP_VERB.DELETE,
-      resource: ({ id }) => `${process.env.API_BASE_URL}/to-dos/${id}`
+      resource: ({ id }) => `${process.env.API_BASE_URL}/${SUFFIX}/${id}`
+    },
+    UPDATE: {
+      key: `${NAME}_UPDATE`,
+      method: HTTP_VERB.PUT,
+      resource: ({ id }) => `${process.env.API_BASE_URL}/${SUFFIX}/${id}`
     }
   }
 })
-
-export default API

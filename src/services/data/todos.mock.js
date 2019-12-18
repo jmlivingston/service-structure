@@ -2,7 +2,7 @@ export default Object.freeze({
   data: [
     {
       id: 1,
-      name: 'Walk the dog',
+      name: 'Mock - Walk the dog',
       completed: false,
       createdById: 1,
       createdDate: '2016-01-01',
@@ -11,7 +11,7 @@ export default Object.freeze({
     },
     {
       id: 2,
-      name: 'Do the dishes',
+      name: 'Mock - Do the dishes',
       completed: true,
       createdById: 2,
       createdDate: '2016-01-01',
@@ -20,7 +20,7 @@ export default Object.freeze({
     },
     {
       id: 3,
-      name: 'Sleep',
+      name: 'Mock - Sleep',
       completed: false,
       createdById: 1,
       createdDate: '2016-01-01',
@@ -29,7 +29,7 @@ export default Object.freeze({
     },
     {
       id: 4,
-      name: 'Feed the cat',
+      name: 'Mock - Feed the cat',
       completed: true,
       createdById: 3,
       createdDate: '2016-01-01',
@@ -38,7 +38,7 @@ export default Object.freeze({
     },
     {
       id: 5,
-      name: 'Learn LISP',
+      name: 'Mock - Learn LISP',
       completed: true,
       createdById: 3,
       createdDate: '2016-01-01',
@@ -47,7 +47,7 @@ export default Object.freeze({
     },
     {
       id: 6,
-      name: 'Take medication',
+      name: 'Mock - Take medication',
       completed: false,
       createdById: 4,
       createdDate: '2016-01-01',
